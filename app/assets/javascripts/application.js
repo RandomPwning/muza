@@ -7,17 +7,24 @@
 
 (function(){
 
-	var demoApp = angular.module('demoApp', []);
+	var demoApp = angular.module('demoApp', [])
 
-		demoApp.controller('MainCtrl', function($scope, demoFactory){
+		// Main Controller //
+		.controller('MainCtrl', function($scope, demoFactory){
 			// $scope.name = "Hello World!";
 			console.log(demoFactory);
-		});
-
-
-		demoApp.factory('demoFactory', function(){
-			return "test string"
 		})
+
+		// Demo Factory //
+		.factory('demoFactory', function(){
+			var factory = {};
+			var users = [];
+
+			factory.getCustomers = function(){
+				return users;
+			};
+			return factory;
+		});
 
 })();
 
