@@ -7,28 +7,11 @@
 
 (function(){
 
-	var demoApp = angular.module('demoApp', [])
-
-		// Main Controller //
-		.controller('MainCtrl', function($scope, demoFactory){
-			// $scope.name = "Hello World!";
-			console.log(demoFactory);
-		})
-
-		// Demo Factory //
-		.factory('demoFactory', function(){
-			var factory = {};
-			var users = [];
-
-			factory.getCustomers = function(){
-				return users;
-			};
-			return factory;
-		});
+angular.module('muza', []);
 
 })();
 
-
+// Routing Example Below //
 
 // angluar
 // 	.module('muza' [
