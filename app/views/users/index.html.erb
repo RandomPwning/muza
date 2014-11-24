@@ -15,10 +15,12 @@
     <input type="submit" class="btn btn-primary pull-right" value="Submit" />
   </fieldset>
 
+  <div ng-view ng-controller="loginCtrl">
+
+  {{name}}
+
+  </div>
+
+
 </form>
 
-<div ng-view ng-controller="loginCtrl">
-
-	{{name}}
-
-</div>
