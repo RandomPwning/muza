@@ -16,11 +16,15 @@
   </fieldset>
 
   <div ng-view ng-controller="loginCtrl">
-
-  {{name}}
-
+    {{name}}
   </div>
-
 
 </form>
 
+<form class="container">
+  <%= form_for @user do |f| %>
+    <%= f.email_field :email, placeholder: "email", class: "form-control" %>
+    <br>
+  <%= f.submit %>
+  <% end %>
+</form>

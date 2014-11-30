@@ -37,8 +37,8 @@ gem 'bson_ext'
 # testing
 group :development, :test do
   gem 'rspec-rails', '~> 3.0.0'
-  # gem 'guard-rspec', require: false
-  gem "jasmine", github: "pivotal/jasmine-gem"
+  gem 'guard-rspec', require: false
+  gem 'jasmine', github: 'pivotal/jasmine-gem'
   gem 'shoulda-matchers'
 end
 

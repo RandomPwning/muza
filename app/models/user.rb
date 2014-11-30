@@ -5,5 +5,5 @@ class User
   field :password_digest, type: String
 
   has_many :roles
-  has_many :statuses, :through => :roles
+  has_many :statuses
 end
