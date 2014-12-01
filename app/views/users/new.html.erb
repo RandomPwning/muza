@@ -1,30 +1,24 @@
-
-<form class="container" name="loginForm">
-  <!--  Login Form -->
-  <h4>Login</h4>
-
-  <fieldset class="form-group">
-    <input type="email" class="form-control" placeholder="email" title="Email" />
-  </fieldset>
- 
-  <fieldset class="form-group">
-    <input type="password" class="form-control" placeholder="password" title="Password" />
-  </fieldset>
-  
-  <fieldset class="form-group">
-    <input type="submit" class="btn btn-primary pull-right" value="Submit" />
-  </fieldset>
-
-  <div ng-view ng-controller="loginCtrl">
-    {{name}}
-  </div>
-
-</form>
-
-<form class="container">
-  <%= form_for @user do |f| %>
-    <%= f.email_field :email, placeholder: "email", class: "form-control" %>
-    <br>
-  <%= f.submit %>
+<div class="container">
+<%= form_for(@user) do |f| %>
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+      <% @user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
   <% end %>
-</form>
+
+  <div class="field">
+    <br>
+    <%= f.text_field :email, placeholder: 'email', autocomplete: "on"  %>
+  </div>
+  <div class="field">
+    <br>
+    <%= f.password_field :password, placeholder: 'password', autocomplete: "off" %>
+  </div>
+    <br>
+  <button type="submit" class="btn btn-primary">Submit</button>
+<% end %>
+</div>

@@ -4,7 +4,8 @@ RSpec.describe UsersController, :type => :controller do
 # describe UsersController do
 	let :valid_attributes do
 		{
-			email: 'test@email.com'
+			email: 'test@email.com',
+			password: 'password'
 		}
 	end
 
