@@ -1,8 +1,8 @@
 class Role
   include Mongoid::Document
-  field :admin, type: String
-  field :guest, type: String
+  include Mongoid::Timestamps
+  field :role_name, type: String
 
-  belongs_to :user
+  has_many :user
 
 end

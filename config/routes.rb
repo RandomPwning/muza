@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   # User Routes
   get 'users' => 'users#new'
   post 'users' => 'users#create', as: :create_users
+  resources :users
+
   
 
 
