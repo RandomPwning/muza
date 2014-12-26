@@ -1,13 +1,15 @@
 Rails.application.routes.draw do
 
   # Root Route
-  root 'users#index'
+  # root 'users#index'
 
   # User Routes
-  get 'users' => 'users#new'
-  post 'users' => 'users#create', as: :create_users
-  resources :users
+  # get 'users' => 'users#new'
+  # post 'users' => 'users#create', as: :create_users
+  # resources :users
 
+  root 'application#index'
+  get '*path' => 'application#index'
   
 
 

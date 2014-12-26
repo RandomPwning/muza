@@ -1,53 +1,23 @@
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
 //= require angular
 //= require angular-resource
+//= require angular-animate
+//= require angular-ui-router
+//= require angular-rails-templates
 //= require_tree .
-
-(function(){
-
-angular.module('muza', []);
+//= require_tree ../templates
 
 
 
-})();
 
-// Routing Example Below //
 
-// angluar
-// 	.module('muza' [
-// 		'ui.router'
-// 	])
+// (function(){
 
-// 	.config(['$urlRouterProvider', '$stateProvider', function($urlRouterProvider, $stateProvider){
-// 		$urlRouterProvider.otherwise('/');
+// angular.module('muza', []);
 
-// 		$stateProvider
-// 			.state('home', {
-// 				url: '/',
-// 				templateUrl: '??????'
-// 				controller: ['$scope', function($scope) {
 
-// 				}]
-// 			})
 
-// 		$stateProvider
-// 			.state('about', {
-// 				url: '/about',
-// 				templateUrl: '??????'
-// 				controller: ['$scope', function($scope) {
+// })();
 
-// 				}]
-// 			})
 
-// 		$stateProvider
-// 			.state('contact', {
-// 				url: '/contact',
-// 				templateUrl: '??????'
-// 				controller: ['$scope', function($scope) {
-
-// 				}]
-// 			})
-
-// 	}])

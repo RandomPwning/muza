@@ -1,6 +1,8 @@
 class UsersController < ApplicationController
 
 	def index
+		render json: [] and return unless params[:user_id]
+		
 		@users = User.all
 	end
 	

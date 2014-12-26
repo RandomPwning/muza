@@ -13,7 +13,7 @@ class User
 
   has_secure_password
 
-  belongs :roles
+  belongs_to :roles
   has_many :statuses
 
 end

@@ -1,7 +1,7 @@
 class StatusesController < ApplicationController
 
 	def index
-    		render json: [] and return unless params[:user_id]
+    render json: [] and return unless params[:user_id]
 
 		@status = Status.where(user_id: params[:user_id])
 	end
