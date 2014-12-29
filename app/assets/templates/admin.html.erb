@@ -1,0 +1,28 @@
+<!-- <div ng-controller='AdminController'> -->
+<!-- <table class='container'>
+	<tr ng-repeat='item in adminItems'>
+	<h1>Admin</h1>
+	<td>{{item.name}}</td>
+		<td><button class="btn btn-small" type="button" ng-click=""> Go </button></td>
+	</tr>
+
+</table>
+</div> -->
+
+<fieldset>
+	<legend>Muza  Admin</legend>
+</fieldset>
+<div ng-controller='AdminController' class='container-fluid'>
+
+<div class="btn-group pull-right" dropdown >
+      <button type="button" class="btn btn-small btn-inverse dropdown-toggle">
+      		<span class="caret"></span>
+      		<span class="sr-only">Lookup</span>
+      </button>
+      <ul class="dropdown-menu" role="menu">
+		<li><a ng-click="lookupOrder(lookupId)">Lookup User</a></li>
+		<li class="divider"></li>
+		<li><a ng-click="lookupCustomer(lookupId)">Lookup Status</a></li>
+
+      </ul>
+</div>
