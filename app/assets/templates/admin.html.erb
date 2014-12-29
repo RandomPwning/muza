@@ -1,28 +1,89 @@
-<!-- <div ng-controller='AdminController'> -->
-<!-- <table class='container'>
-	<tr ng-repeat='item in adminItems'>
-	<h1>Admin</h1>
-	<td>{{item.name}}</td>
-		<td><button class="btn btn-small" type="button" ng-click=""> Go </button></td>
-	</tr>
 
-</table>
-</div> -->
 
 <fieldset>
 	<legend>Muza  Admin</legend>
 </fieldset>
 <div ng-controller='AdminController' class='container-fluid'>
-
+<!-- 
 <div class="btn-group pull-right" dropdown >
       <button type="button" class="btn btn-small btn-inverse dropdown-toggle">
       		<span class="caret"></span>
       		<span class="sr-only">Lookup</span>
       </button>
       <ul class="dropdown-menu" role="menu">
-		<li><a ng-click="lookupOrder(lookupId)">Lookup User</a></li>
+		<li><a ng-click="lookupOrder(lookupId)">Lookup Order</a></li>
 		<li class="divider"></li>
-		<li><a ng-click="lookupCustomer(lookupId)">Lookup Status</a></li>
+		<li><a ng-click="lookupCustomer(lookupId)">Lookup Customer</a></li>
 
       </ul>
+</div> -->
+
+<div>
+<input type="text" style="width:100px; height:17px " class="pull-right" autofocus ng-model="lookupId"> &nbsp;
+<table class='table table-striped'>
+	<tr>
+		<th>Section</th>
+		<th>Actions</th>
+	</tr>
+
+	<tr>
+	<td> Users </td>
+		<td>
+			<button class="btn btn-small" type="button" ng-click="loadPage('users')">View</button>
+			<button class="btn btn-small" type="button" ng-click="loadPage('statuses/new')">New </button>
+		</td>
+	</tr>
+
+
+	<tr>
+		<td> Statuses </td>
+		<td>
+			<button class="btn btn-small" type="button" ng-click="loadPage('statuses')">List </button>
+			<button class="btn btn-small" type="button" ng-click="loadPage('statuses/new')">New </button>
+		</td>
+	</tr>
+
+	<td>Roles</td>
+		<td>
+			<button class="btn btn-small" type="button" ng-click="loadPage('roles')">List </button>
+			<button class="btn btn-small" type="button" ng-click="loadPage('statuses/new')">New </button>
+		</td>
+	</tr>
+	
+	<tr>
+	<td>Muza Updates</td>
+		<td>
+			<button class="btn btn-small" type="button" ng-click="loadPage('muza_updates')">List </button>
+			<button class="btn btn-small" type="button" ng-click="loadPage('muza_updates/new')">New </button>
+		</td>
+	</tr>
+		<tr>
+	<td>Reports</td>
+		<td>
+			<button class="btn btn-small" type="button" ng-click="loadPage('reports')">View</button>
+		</td>
+	</tr>
+	<td>Newsletters</td>
+		<td>
+			<button class="btn btn-small" type="button" ng-click="loadPage('newsletters')">List </button>
+			<button class="btn btn-small" type="button" ng-click="loadPage('newsletters/new')">New </button>
+		</td>
+	</tr>
+	<tr>
+	<td>Calendars</td>
+		<td>
+			<button class="btn btn-small" type="button" ng-click="loadPage('/calendars/')">List </button>
+			<button class="btn btn-small" type="button" ng-click="loadPage('/calendars/new')">New </button>
+		</td>
+	</tr>
+	<tr>
+	<td>Blog Posts</td>
+		<td>
+			<button class="btn btn-small" type="button" ng-click="loadPage('/blogs/1/posts')">List </button>
+			<button class="btn btn-small" type="button" ng-click="loadPage('/blogs/1/posts/new')">New </button>    </td>
+	</tr>
+		<tr>
+
+
+</table>  
 </div>
